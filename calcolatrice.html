@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title> <!-- nome sito -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- favicon -->
+    <link rel="stylesheet" href="calcolatrice.css"> <!-- stile css -->
+    <script src="c.js"></script> <!-- js -->
+
+    <div class="schermo"> <!-- schermo -->   
+        <div id="addendo"> Scrivi qui</div>
+        <div id="risultato"></div>         
+    </div>
+
+</head>
+
+<body>
+
+    <div class="col-1">
+        <button id="(" onclick="aggiungi('apri')">(</button>
+        <br>
+        <button id="1" onclick="aggiungi(1)">1</button>
+        <br>
+        <button id="4" onclick="aggiungi(4)">4</button>
+        <br>
+        <button id="7" onclick="aggiungi(7)">7</button>
+        <br>
+        <button id="." onclick="aggiungi('.')">.</button> 
+    </div>
+
+    <div class="col-1">
+        <button id=")" onclick="aggiungi('chiudi')">)</button>
+        <br>
+        <button id="2" onclick="aggiungi(2)">2</button>
+        <br>
+        <button id="5" onclick="aggiungi(5)">5</button>
+        <br>
+        <button id="8" onclick="aggiungi(8)">8</button>
+        <br>
+        <button id="0" onclick="aggiungi(0)">0</button>
+    </div>
+
+    <div class="col-1">
+        <button id="DEL" style="padding: 15px 0px" onclick="x=x.slice(0,-1),stampa(x)">DEL</button>
+        <!-- https://flaviocopes.com/how-to-remove-last-char-string-js/ -->
+        <br>
+        <button id="3" onclick="aggiungi(3)">3</button>
+        <br>
+        <button id="6" onclick="aggiungi(6)">6</button>
+        <br>
+        <button id="9" onclick="aggiungi(9)">9</button>
+        <br>
+        <button id="AC" style="padding: 15px 6px" onclick="document.location.reload(true)">AC</button> 
+        <!-- riavvia la pagina per resettare la calcolatrice -->
+    </div>
+
+    <div class="col-1">
+        <button id="%" onclick="aggiungi('/')">÷</button>
+        <br>
+        <button id="*" onclick="aggiungi('*')">*</button> 
+        <br>       
+        <button id="+" onclick="aggiungi('+')">+</button>  
+        <br>      
+        <button id="-" onclick="aggiungi('-')">-</button>
+        <br>
+        <button id="=" onclick="(calcola())" >=</button>
+    </div>      
+        
+    <div class="col-9"></div>
+
+</body>
+
+<footer>
+    <a href="index.html">HomePage</a>
+</footer>
+
+</html>
